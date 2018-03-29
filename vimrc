@@ -8,8 +8,12 @@ set expandtab    " tabs are spaces
 set number    " show line numbers
 set cindent    " indent for C language
 set shiftwidth=4    " use indents of 4 spaces
+set ruler    " display page and percentage
 
 " Searching
 set hlsearch    " highlight mathces
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>   
+
+" Encoding
+set encoding=utf-8    " use utf-8
