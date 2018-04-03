@@ -12,8 +12,26 @@ set ruler    " display page and percentage
 
 " Searching
 set hlsearch    " highlight mathces
+set incsearch    " match the pattern when typing
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>   
 
 " Encoding
 set encoding=utf-8    " use utf-8
+
+" Buffer
+set history=200    " record 200 commands in buffer
+
+" shortcut for %:h<Tab>
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'    
+
+" break the habit
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+" jump between matching keywords
+set nocompatible
+filetype plugin on
+runtime macros/matchit.vim
