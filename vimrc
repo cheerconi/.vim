@@ -31,7 +31,5 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-" jump between matching keywords
-set nocompatible
-filetype plugin on
-runtime macros/matchit.vim
+" compatibility
+set backspace=indent,eol,start    " enhance the backspace for mac
