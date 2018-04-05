@@ -33,3 +33,11 @@ noremap <Right> <Nop>
 
 " compatibility
 set backspace=indent,eol,start    " enhance the backspace for mac
+
+" automatic closing brackets
+inoremap "    ""<left>
+inoremap '    ''<left>
+inoremap (    ()<left>
+inoremap [    []<left>
+inoremap {<CR>    {<CR>}<ESC>O
+inoremap {;<CR>    {<CR>};<ESC>O
